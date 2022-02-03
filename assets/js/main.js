@@ -4,22 +4,12 @@ const Home = {
       <div class="about__me">
           <img src="./assets/img/JVAvatarMaker.svg" alt="Avatar image">
           <h1>Vitor Oliveira</h1>
-          <h3>New joined Java</h3>
+          <h3>Junior Java Developer</h3>
           <p>Hello Friend!! My name is José Vitor and I have 4 years of experience in support with Siebel8 Oracle CRM</p>
   
-          <div class="skills_projects_link"><router-link to="/projects">Projects/Skills/Resume</router-link> </div>
+          <div class="skills_projects_link"><router-link to="/projects">Projects/Skills</router-link> </div>
       </div>
   </main>`
-}
-
-const Resume = {
-  template: `<div>
-        <main class="container">
-            <section id="resume">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </section>
-        </main>
-    </div>`
 }
 
 const Projects = {
@@ -29,8 +19,8 @@ const Projects = {
               <img src="./assets/img/JVAvatarMaker.svg" alt="">
               <div class="bio__media__text">
                   <h1>Vitor Oliveira</h1>
-                  <h3>New joined Java</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                  <h3>Junior Java Developer</h3>
+                  <p></p>
               </div>
           </div>
           <nav>
@@ -139,10 +129,10 @@ const Projects = {
     fetchData: function () {
       axios
         .get(
-          `https://api.github.com/users/vitor0liveira/repos?per_page=${this.perPage}&page=${this.page}`
+          `https://api.github.com/users/vitor0liveira/repos?per_page=${this.perPage}&page=${this.page}&sort=created&direction=desc&type=all`
         )
         .then(response => {
-          this.projects = response.data
+          this.projects = response.data.filter(p => !p.fork)
           this.projects.forEach(project => {
             if (
               project.language !== null &&
@@ -168,15 +158,14 @@ const Projects = {
       }
     }
   },
-  mounted() {
-    setTimeout(this.fetchData, 3000)
+  beforeMount() {
+    this.fetchData()
   }
 }
 
 // Define routes
 const routes = [
   { path: '/', component: Home },
-  { path: '/resume', component: Resume },
   { path: '/projects', component: Projects }
 ]
 
