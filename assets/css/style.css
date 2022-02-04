@@ -273,3 +273,27 @@ footer {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .d_flex {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #skills_section {
+    background-image: none;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #skills_section h2 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #skills_section .skills {
+    font-size: 1rem;
+  }
+}
