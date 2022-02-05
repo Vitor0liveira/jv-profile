@@ -41,7 +41,6 @@ const Projects = {
           <div class="error" v-if="errors"> 
               Sorry! It seems we can't fetch data righ now 😥
           </div>
-
           <section id="portfolio" v-else>
               <div class="loading" v-if="loading">😴 Loading ... </div>
               <div class="projects" v-else>
@@ -70,8 +69,6 @@ const Projects = {
                   
                   
                   </div>
-
-
                   <div style="text-align: center; width:100%" v-if="!loading" >
                       <div v-if="projectsList.length < projects.length">
                           <button class="btn_load_more" v-on:click="loadMore()">Load More</button>
@@ -79,9 +76,7 @@ const Projects = {
                       <div v-else>
                           <a href="https://github.com/Vitor0liveira" target="_blank" rel="noopener noreferrer">Visit My GitHub</a>
                       </div>
-
                   </div>
-
                   <div id="skills_section">
                       <h2>Development Skills</h2>
                       <ul class="skills">

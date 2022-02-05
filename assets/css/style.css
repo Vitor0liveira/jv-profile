@@ -293,11 +293,13 @@ footer {
 @media screen and (max-width: 425px) {
   #skills_section h2 {
     font-size: 2rem;
+    margin-left: 10px;
   }
 }
 
 @media screen and (max-width: 425px) {
   #skills_section .skills {
     font-size: 1rem;
+    margin: 10px;
   }
 }
