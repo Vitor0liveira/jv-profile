@@ -1,15 +1,17 @@
 // Create route components
 const Home = {
-  template: `<main id="home">
-      <div class="about__me">
-          <img src="./assets/img/JVAvatarMaker.svg" alt="Avatar image">
-          <h1>Vitor Oliveira</h1>
-          <h3>Junior Java Developer</h3>
-          <p>Hello Friend!! My name is José Vitor and I have 4 years of experience in support with Siebel8 Oracle CRM</p>
-  
-          <div class="skills_projects_link"><router-link to="/projects">Projects/Skills</router-link> </div>
-      </div>
-  </main>`
+  template: `
+  <main id="home">
+  <div class="about__me">
+      <img src="./assets/img/JVAvatarMaker.svg" class="img-fluid" alt="Avatar image">
+      <h1>Vitor Oliveira</h1>
+      <h3>Junior Java Developer</h3>
+      <p>Hello Friend!! My name is José Vitor and I have 4 years of experience in support with Siebel8 Oracle CRM</p>
+
+      <div class="skills_projects_link"><router-link to="/projects">Projects/Skills</router-link> </div>
+  </div>
+</main>
+  `
 }
 
 const Projects = {

@@ -1,3 +1,7 @@
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
 /* Utility Classes */
 .d_none {
   display: none;
