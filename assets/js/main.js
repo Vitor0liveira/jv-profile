@@ -36,7 +36,6 @@ const Projects = {
               </a>
           </nav>
       </header>
-  
        <main class="container">
           <div class="error" v-if="errors"> 
               Sorry! It seems we can't fetch data righ now 😥
@@ -66,8 +65,6 @@ const Projects = {
                               Code
                           </a>
                       </div>
-                  
-                  
                   </div>
                   <div style="text-align: center; width:100%" v-if="!loading" >
                       <div v-if="projectsList.length < projects.length">
@@ -84,9 +81,7 @@ const Projects = {
                       </ul>
                   </div>
               </div>
-          </section>
-      
-         
+          </section>         
       </main>
   </div>`,
   data() {
